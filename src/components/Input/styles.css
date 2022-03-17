@@ -1,0 +1,58 @@
+.input {
+    display: inline-flex;
+    position: relative;
+    height: 64px;
+    overflow: hidden;
+    color: var(--text-color-3);
+}
+
+.input__container {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    gap: 1ch;
+    height: 100%;
+    left: 0;
+    padding: 1ch;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.input__label {
+    color: var(--text-color-3);
+    font-size: 1em;
+    font-weight: 400;
+    transition: transform .1s ease-in-out, font-size .1s ease-in-out;
+}
+
+.input:focus-within .input__label,
+.input__label--shrunk {
+    transform: translateY(-1em);
+    font-size: .7em;
+}
+
+.input__icon {
+    fill: var(--text-color-3);
+    height: 16px;
+    width: 16px;
+}
+
+.input__input {
+    border-radius: 6px;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-weight: 400;
+    height: 100%;
+    left: 0;
+    padding: 32px 16px 16px calc(2ch + 18px);
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+[dir="rtl"] .input__input {
+    padding: 32px calc(2ch + 18px) 16px 16px;
+}
