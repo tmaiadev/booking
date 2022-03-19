@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import SearchForm from './components/SearchForm';
+import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>

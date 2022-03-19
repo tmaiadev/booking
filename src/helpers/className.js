@@ -1,4 +1,4 @@
-export default function(stylesObject) {
+export default function className(stylesObject) {
     return Object.entries(stylesObject)
         .filter(([, value]) => value)
         .map(([key]) => key)
