@@ -23,6 +23,7 @@ body {
 }
 
 :focus {
+    outline: none;
     outline-offset: 2px;
     outline-color: var(--surface-color-3);
 }
@@ -68,8 +69,8 @@ body {
 
 .hero__form {
     text-align: center;
+    min-height: 140px;
 }
-
 
 .advantages-list {
     display: inline-flex;
@@ -107,6 +108,10 @@ body {
     .hero__bg-filter {
         background: linear-gradient(var(--surface-color), hsl(var(--brand-hue), 79%, 44%, 0));
         min-height: 50vh;
+    }
+
+    .hero__form {
+        min-height: 72px;
     }
 
     .hero__container > :nth-child(1) {

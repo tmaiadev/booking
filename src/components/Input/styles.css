@@ -43,7 +43,7 @@
 
 .input__input {
     border-radius: 6px;
-    border: 0;
+    border-width: 0;
     box-sizing: border-box;
     font-size: 1em;
     font-weight: 400;
@@ -161,5 +161,22 @@
 @media (prefers-reduced-motion) {
     .input__listbox {
         transition: none;
+    }
+}
+
+@media (forced-colors: active) {
+    .input__input {
+        border-width: initial;
+    }
+
+    .input__listbox-item {
+        border-style: inset;
+        border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    }
+
+    .input__listbox-item--selected .input__listbox-desc,
+    .input__listbox-item--selected .input__listbox-title {
+        forced-color-adjust: none;
+        color: #1bebff;
     }
 }

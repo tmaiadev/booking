@@ -17,6 +17,7 @@ exports[`Given the \`SearchForm\` component should render successfully 1`] = `
         <input
           aria-autocomplete="list"
           aria-controls="pickup-location-listbox"
+          aria-label="Pick-up Location"
           class="input__input"
           id="pickup-location"
           value=""
@@ -33,7 +34,6 @@ exports[`Given the \`SearchForm\` component should render successfully 1`] = `
         class="input__container"
       >
         <svg
-          aria-hidden="true"
           class="input__icon"
           viewBox="0 0 24 24"
         >

@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Booking
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -29,42 +29,34 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Accessibility
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Combobox
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The Pick-up Location field is complient with the Aria 1.1 Combobox design pattern.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Reduced Animations
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Animations are reduced/removed when user activates the Reduce Motion option in the accessibility menu on the Operating System.
 
-## Learn More
+### Forced colors for high contrast
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Styles were tweaked for when user activates the High Contrast option in the accessibility menu on the Operating System.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Compatible with Right-to-Left written languages
 
-### Code Splitting
+The layout is compatible with Right-to-Left written languages. This can be viewed by changing the `dir` attribute in the `<html>` tag from "*ltr*" to "**rtl**".
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Font-sizes
 
-### Analyzing the Bundle Size
+Font sizes are scalabe and responds to the user's preferences set in the browser preferences.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Performance
 
-### Making a Progressive Web App
+### White page
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+To avoid a white page while the javascript file is being loaded and parsed, the header area of the application is written staticly in the index.html file. Only the form itself is dynamically rendered using javascript. This brings the benefit of improved perceived performance to the user, especially users on slow devices and/or slow connections.
 
-### Advanced Configuration
+### Throttled network requests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+As a side effect of typing in the Pick-Up Location field, a request is done to the autocomplete service. To avoid multiple requests for each character input in the field, there is a cool-off period 600ms before the next request to ensure the player is done typing.

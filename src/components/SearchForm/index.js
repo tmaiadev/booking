@@ -7,6 +7,7 @@ const Form = () => {
     const [pickupLocationQuery, setPickupLocationQuery] = useState('');
     const [dataList, setDataList] = useState([]);
     const [loading, setLoading] = useState(false);
+
     const onSubmit = evt => evt.preventDefault();
 
     useEffect(() => {

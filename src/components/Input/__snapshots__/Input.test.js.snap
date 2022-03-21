@@ -7,6 +7,7 @@ exports[`Given the \`Input\` component should render successfully 1`] = `
   >
     <div>
       <input
+        aria-label="My Input Name"
         class="input__input"
         id="my-input-id"
         value=""
@@ -23,7 +24,6 @@ exports[`Given the \`Input\` component should render successfully 1`] = `
       class="input__container"
     >
       <svg
-        aria-hidden="true"
         class="input__icon"
         viewBox="0 0 24 24"
       >
